@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Str;
 
+$DATABASE_URL = parse_url('https://devjobs-laravel-miguel.herokuapp.com/
+    DATABASE_URL:      postgres://ktvnwbzrrkieyy:44cba0c9d8dbf52fa9015e6cd9153893582dbcba384a6d9fb07fca2daaed33bf@ec2-52-7-228-45.compute-1.amazonaws.com:5432/dcgp5hc66lahjj');
+
 return [
 
     /*
@@ -15,7 +18,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -32,6 +35,10 @@ return [
     | choice installed on your machine before you begin development.
     |
     */
+
+
+
+
 
     'connections' => [
 
@@ -68,7 +75,7 @@ return [
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '5432'),
-            'database' => env('DB_DATABASE', 'forge'),
+            'database' => ltrim($DATABASE_URL["path"], "/"),
             'username' => env('DB_USERNAME', 'forge'),
             'password' => env('DB_PASSWORD', ''),
             'charset' => 'utf8',

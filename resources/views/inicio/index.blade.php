@@ -19,7 +19,7 @@
 
         </div>
         <div class="block lg:w-2/5">
-            <img class="inset-0 h-full w-full object-cover" src="{{ asset('img/05.jpg') }}" alt="devjobs">
+            <img class="inset-0 h-full w-full object-cover" src="{{ secure_asset('img/05.jpg') }}" alt="devjobs">
         </div>
     </div>
 

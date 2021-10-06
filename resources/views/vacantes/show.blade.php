@@ -47,8 +47,8 @@
             </p>
             @endforeach
 
-            <a href="{{ secure_asset('/storage/vacantes/{{$vacante->imagen}}')}}" data-lightbox="imagen" data-title="Vacante {{$vacante->titulo}}" >
-                <img src="{{ secure_asset('/storage/vacantes/{{$vacante->imagen}}')}}" class="w-40 mt-10" alt="">
+            <a href="/storage/vacantes/{{$vacante->imagen}}" data-lightbox="imagen" data-title="Vacante {{$vacante->titulo}}" >
+                <img src="/storage/vacantes/{{$vacante->imagen}} " class="w-40 mt-10" alt="">
             </a>
             <div class="mt-10 mb-5">
                 {!! $vacante->descripcion !!}
